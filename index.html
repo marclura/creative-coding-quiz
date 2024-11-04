@@ -9,51 +9,107 @@
 </head>
 <body>
     <main>
-        <section id="helpers" class="hidden">
-            <img src="assets/html-items.png" id="img-html-items">
-        </section>
         <section id="code-quiz">
-            <!-- HTML vocabualry -->
-            <code data-lang="html" data-type="vocabulary" class="active">
-                <span class="element"><span class="opening-tag">&lt;a <span class="attribute">href=”<span class="value">https://url.xyz</span>”</span> <span class="attribute">target=”<span class="value">_blank</span>”</span>&gt;</span><span class="content">Link to url.xyz</span><span class="closing-tag">&lt;/a&gt;</span></span>
-            </code>
-            <code data-lang="html" data-type="vocabulary" style="text-align: left;">
-                <span class="element"><span class="opening-tag">&lt;ul <span class="attribute">class=”generic-list”</span>&gt;</span><br>
-                &nbsp;&nbsp;&nbsp;<span class="element"><span class="opening-tag">&lt;li&gt;</span><span class="content">One</span><span class="closing-tag">/li&gt;</span></span><br>
-                &nbsp;&nbsp;&nbsp;<span class="element"><span class="opening-tag">&lt;li <span class="attribute">id=”<span class="value">selected</span>”</span>&gt;</span><span class="content">Two</span><span class="closing-tag">&lt;/li&gt;</span></span><br>
-                &nbsp;&nbsp;&nbsp;<span class="element"><span class="opening-tag">&lt;li&gt;</span><span class="content">Three</span><span class="closing-tag">&lt;/li&gt;</span></span><br>
-                <span class="closing-tag">&lt;/ul&gt;</span></span>
-            </code>
-            <code data-lang="html" data-type="vocabulary" style="text-align: left;">
-                <span class="element">&lt;img <span class="attribute">src=”<span class="value">img/bg.jpg</span>”</span>&gt;</span>
-            </code>
-            <code data-lang="html" data-type="vocabulary" style="text-align: left;">
-                <span class="element"><span class="opening-tag">&lt;p <span class="attribute">class=”<span class="value">quote</span>”</span>&gt;</span><span class="content">Coding is <span class="element"><span class="opening-tag">&lt;span&gt;</span><span class="content">great!</span><span class="closing-tag">&lt;/span&gt;</span></span></span><span class="closing-tag">&lt;/p&gt;</span></span>
-            </code>
-            <code data-lang="html" data-type="vocabulary" style="text-align: left;">
-                <span class="element"><span class="opening-tag">&lt;p <span class="attribute">class=”<span class="value">quote</span>”</span>&gt;</span><span class="content">Coding is <span class="element"><span class="opening-tag">&lt;span&gt;</span><span class="content">great!</span><span class="closing-tag">&lt;/span&gt;</span></span></span><span class="closing-tag">&lt;/p&gt;</span></span>
-            </code>
-            <!-- CSS vocabulary -->
-            <code data-lang="css" data-type="vocabulary" style="text-align: left;">
-                <span class="selector">.button-submit</span> { <span class="propery">background-color</span>: <span class="value">blue;</span>   }</span>
-            </code>
-            <code data-lang="css" data-type="vocabulary" style="text-align: left;">
-                <span class="selector">#user-input</span> { <span class="propery">font-size</span>: <span class="value">2rem</span>; <span>margin-top</span>: <span>2em</span>;   }</span>
-            </code>
-            <code data-lang="css" data-type="vocabulary" style="text-align: left;">
-                <span class="selector">section</span> { <span class="propery">padding</span>: <span class="value">0 1rem 0 1rem</span>; <span>width</span>: <span>50%</span>;   }</span>
-            </code>
-            <!-- JS vocabulary -->
-            <code data-lang="js" data-type="vocabulary" style="text-align: left;">
-                <span><span class="">let</span> <span class="name">amountCounter</span> <span class="operator">=</span> <span class="value">55</span>;</span>
-            </code>
-        </section>
-        <section id="controller">
-            <button id="button-quiz-next">&#128260</button>
-            <button id="button-next-block">&#9193</button>
-            <button id="button-helper">&#128735</button>
+
+            <!-- HTML -->
+            <div id="html-container" data-language="html">
+
+                <div class="helper hidden" id="html-helper">
+                    <img src="assets/html-helper.png">
+                </div>
+
+                <!-- HTML vocabualry -->
+                <div data-topic="vocabulary">
+                    <code data-type="active">
+                        <span data-type="element"><span data-type="opening-tag">&lt;a <span data-type="attribute">href=”<span data-type="value">https://url.xyz</span>”</span> <span data-type="attribute">target=”<span data-type="value">_blank</span>”</span>&gt;</span><span data-type="content">Link to url.xyz</span><span data-type="closing-tag">&lt;/a&gt;</span></span>
+                    </code>
+                    <code>
+                        <span data-type="element"><span data-type="opening-tag">&lt;ul <span data-type="attribute">data-type=”generic-list”</span>&gt;</span><br>
+                        &nbsp;&nbsp;&nbsp;<span data-type="element"><span data-type="opening-tag">&lt;li&gt;</span><span data-type="content">One</span><span data-type="closing-tag">/li&gt;</span></span><br>
+                        &nbsp;&nbsp;&nbsp;<span data-type="element"><span data-type="opening-tag">&lt;li <span data-type="attribute">id=”<span data-type="value">selected</span>”</span>&gt;</span><span data-type="content">Two</span><span data-type="closing-tag">&lt;/li&gt;</span></span><br>
+                        &nbsp;&nbsp;&nbsp;<span data-type="element"><span data-type="opening-tag">&lt;li&gt;</span><span data-type="content">Three</span><span data-type="closing-tag">&lt;/li&gt;</span></span><br>
+                        <span data-type="closing-tag">&lt;/ul&gt;</span></span>
+                    </code>
+                    <code>
+                        <span data-type="element">&lt;img <span data-type="attribute">src=”<span data-type="value">img/bg.jpg</span>”</span>&gt;</span>
+                    </code>
+                    <code>
+                        <span data-type="element"><span data-type="opening-tag">&lt;p <span data-type="attribute">data-type=”<span data-type="value">quote</span>”</span>&gt;</span><span data-type="content">Coding is <span data-type="element"><span data-type="opening-tag">&lt;span&gt;</span><span data-type="content">great!</span><span data-type="closing-tag">&lt;/span&gt;</span></span></span><span data-type="closing-tag">&lt;/p&gt;</span></span>
+                    </code>
+                </div>
+
+            </div>
+
+            <!-- CSS -->
+            <div id="css-container" data-language="css">
+
+                <div class="helper hidden" id="css-helper">
+                    <img src="assets/css-helper.png">
+                </div>
+
+                <!-- CSS vocabulary -->
+                <div data-topic="vocabualry">
+                    <code>
+                        <span data-type="selector">.button-submit</span> { <span data-type="propery">background-color</span>: <span data-type="value">blue;</span>   }</span>
+                    </code>
+                    <code>
+                        <span data-type="selector">#user-input</span> { <span data-type="propery">font-size</span>: <span data-type="value">2rem</span>; <span>margin-top</span>: <span>15px</span>;   }</span>
+                    </code>
+                    <code>
+                        <span data-type="selector">section</span> { <span data-type="propery">padding</span>: <span data-type="value">0 1rem 0 1rem</span>; <span>width</span>: <span>50%</span>;   }</span>
+                    </code>
+                </div>
+
+            </div>
+
+            <!-- JavaScript -->
+            <div id="javascript-container" data-language="javascript">
+
+                <!-- JavaScript vocabulary -->
+                <div data-topic="vocabualry">
+                    <code>
+                        <span><span data-type="">let</span> <span data-type="name">amountCounter</span> <span data-type="operator">=</span> <span data-type="value">55</span>;</span>
+                    </code>
+                    <code>
+                        function <span data-type="name">checkStatus</span>(<span data-type="argument">number</span>, <span data-type="argument">limit</span>) {<br>
+                        <span data-type="statement">&nbsp;&nbsp;&nbsp;if (<span data-type="condition">number <span data-type="comparison operator">></span> limit</span>) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return <span data-type="string">"Above limit"</span>;<br>
+                        &nbsp;&nbsp;&nbsp;}<br>
+                        &nbsp;&nbsp;&nbsp;else {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;retrun <span data-type="string">"Below limit"</span>;<br>
+                        &nbsp;&nbsp;&nbsp;}</span><br>
+                        }
+                    </code>
+                </div>
+            </div>
+
         </section>
     </main>
+
+    <footer>
+
+        <!-- Controller -->
+        <section id="controller">
+            <button id="button-ask">Ask</button>
+            <button id="button-change">Change</button>
+            <button id="button-answer">Answer</button>
+            <button id="button-options">Options</button>
+            <button id="button-help">Help</button>
+        </section>
+
+        <header>
+            <h1>The creative coding trainer</h1>
+
+            <span> | </span>
+
+            <section id="credits">
+                <a href="https://github.com/marclura/creative-coding-quiz" target="_blank">GitHub</a>
+                <span> | </span>
+                <a href="https://marcolurati.ch/" target="_blank">Credits</a>
+            </section>
+        </header>
+    </footer>
+
 </body>
 </html>
 

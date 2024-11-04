@@ -2,6 +2,7 @@ html {
     font-size: 18px;
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
 body {
@@ -9,9 +10,72 @@ body {
     padding: 0;
 }
 
+header {
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+main {
+    height: 100vh;
+    align-content: center;
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding-bottom: 1rem;
+}
+
+#credits {
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+#credits a {
+    color: black;
+    text-decoration: none;
+}
+
+#credits a:hover {
+    border-bottom: 1px solid black;
+}
+
+#controller {
+    width: 100%;
+    text-align: center;
+}
+
+#controller button {
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 0.2rem;
+    padding: 0.4rem;
+    font-size: 1rem;
+}
+#controller button:hover {
+    position: relative;
+    top: -0.1rem;
+    cursor: pointer;
+}
+
+#controller button:active {
+    position: relative;
+    top: 0.1rem;
+}
+
+
 code {
     font-size: 2rem;
-    display: none   ;
+    display: none;
+    text-align: left !important;
 }
 
 .selected {
@@ -20,10 +84,6 @@ code {
 
 .active {
     display: block;
-}
-
-main {
-    height: 100vh;
 }
 
 #helpers {
@@ -54,36 +114,11 @@ main {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    height: 100vh;
 }
 
 
 code {
     text-align: center;
-}
-
-#controller {
-    z-index: 2;
-    position: absolute;
-    bottom: 1rem;
-    width: 100%;
-    text-align: center;
-}
-
-#controller button {
-    border: none;
-    background-color: unset;
-    font-size: 3rem;
-}
-#controller button:hover {
-    position: relative;
-    top: -0.1rem;
-    cursor: pointer;
-}
-
-#controller button:active {
-    position: relative;
-    top: 0.2rem;
 }
 
 .hidden {
