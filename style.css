@@ -33,6 +33,10 @@ footer {
     padding-bottom: 1rem;
 }
 
+.hidden {
+    display: none;
+}
+
 #credits {
     margin-top: 1rem;
     display: inline-block;

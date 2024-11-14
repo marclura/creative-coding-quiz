@@ -10,6 +10,23 @@ let currentCodeBlock = 0;
 
 let spanList = codesList[currentCodeBlock].getElementsByTagName("span");
 
+let currentDataLanguage = "";
+
+function changeCode() {
+    codesList[currentCodeBlock].classList.remove("active");
+    if(currentCodeBlock < codesList.length - 1) {
+        currentCodeBlock++;
+    }
+    else {
+        currentCodeBlock = 0;
+    }
+    codesList[currentCodeBlock].classList.add("active");
+    spanList = codesList[currentCodeBlock].getElementsByTagName("span");
+}
+
+changeCode();
+
+
 // ask
 buttonAsk.addEventListener('click', ()=> {
     const spanArray = Array.from(spanList);
@@ -18,6 +35,7 @@ buttonAsk.addEventListener('click', ()=> {
     spanArray.forEach((element) => {
         element.classList.remove('selected');
     })
+    
     let spanActive;
 
     do {
@@ -26,6 +44,7 @@ buttonAsk.addEventListener('click', ()=> {
     while(spanActive == currentSpanElement);    // avoid picking the same element twice
 
     console.log(spanActive.dataset.type);
+
     spanActive.classList.add('selected');
 })
 
@@ -36,13 +55,6 @@ buttonHelper.addEventListener('click', ()=> {
 
 // change
 buttonChange.addEventListener('click', ()=> {
-    codesList[currentCodeBlock].classList.remove("active");
-    if(currentCodeBlock < codesList.length - 1) {
-        currentCodeBlock++;
-    }
-    else {
-        currentCodeBlock = 0;
-    }
-    codesList[currentCodeBlock].classList.add("active");
-    spanList = codesList[currentCodeBlock].getElementsByTagName("span");
+    changeCode();
 })
+
