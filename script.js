@@ -4,7 +4,6 @@ const buttonHelper = document.getElementById("button-help");
 const buttonChange = document.getElementById("button-change");
 const buttonAnswer = document.getElementById("button-answer");
 
-
 const codesList = document.getElementsByTagName("code");
 const sectionHelpers = document.getElementById("helpers");
 let currentCodeBlock = 0;
